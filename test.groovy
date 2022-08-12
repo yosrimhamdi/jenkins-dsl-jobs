@@ -6,7 +6,7 @@ job('mhamdi-test') {
         }
     }
     triggers {
-        scm('H/5 * * * *')
+        githubPush();
     }
     wrappers {
         nodejs('nodejs')
