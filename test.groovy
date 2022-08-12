@@ -14,5 +14,13 @@ job('mhamdi-test') {
     steps {
         shell("npm install")
         shell("npm test")
+        dockerBuildAndPublish {
+            repositoryName('yosrimhamdi/first-demo')
+            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
+            registryCredentials('f4f99d61-e797-4425-b097-cc103942709b')
+            forcePull(false)
+            createFingerprints(false)
+            skipDecorate()
+        }
     }
 }
