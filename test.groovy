@@ -14,5 +14,6 @@ job('mhamdi-test') {
     steps {
         shell("npm install")
         shell("npm test")
+        shell("echo hi")
     }
 }
