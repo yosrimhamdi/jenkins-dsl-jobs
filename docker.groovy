@@ -5,11 +5,11 @@ job('mhamdi-docker') {
             node / gitConfigEmail('yosri@mhamdi.co')
         }
     }
-    triggers {
-        scm('H/5 * * * *')
-    }
-    wrappers {
-        nodejs('nodejs')
+   triggers {
+        buildResult('H/10 * * * *') {
+            combinedJobs()
+            triggerInfo('mhamdi-test', BuildResult.SUCCESS)
+        }
     }
     steps {
         dockerBuildAndPublish {
