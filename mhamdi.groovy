@@ -1,6 +1,6 @@
 job('mhamdi') {
     scm {
-        git('https://github.com/yosrimhamdi/jenkins-ci-cd') {
+        git('https://github.com/yosrimhamdi/mhamdi') {
             node / gitConfigName('Yosri Mhamdi')
             node / gitConfigEmail('yosri@mhamdi.co')
         }
