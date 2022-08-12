@@ -6,7 +6,7 @@ job('mhamdi-test') {
         }
     }
     triggers {
-        githubPush();
+        githubPush()
     }
     wrappers {
         nodejs('nodejs')
