@@ -1,4 +1,4 @@
-job('mhamdi-test') {
+job('mhamdi') {
     scm {
         git('https://github.com/yosrimhamdi/jenkins-ci-cd') {
             node / gitConfigName('Yosri Mhamdi')
