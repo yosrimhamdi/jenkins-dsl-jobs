@@ -1,4 +1,4 @@
-job('node-app') {
+job('mhamdi-docker') {
     scm {
         git('https://github.com/yosrimhamdi/jenkins-ci-cd') {
             node / gitConfigName('Yosri Mhamdi')
